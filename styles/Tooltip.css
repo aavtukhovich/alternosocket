@@ -1,0 +1,88 @@
+.tooltip-btn {
+    background-color: transparent;
+    padding: 0;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 10px;
+    > svg {
+        margin: auto;
+        height: 100%;
+        fill: var(--text-p);
+        transition: fill 0.25s ease-in-out;
+    }
+}
+
+.tooltip-btn:hover > svg {
+    fill: var(--text-main);
+}
+
+.tooltip {
+    --bs-tooltip-arrow-width: 0.8rem;
+    --bs-tooltip-arrow-height: 0.4rem;
+    z-index: 1080;
+    display: block;
+    margin-top: 5px;
+    font-family: var(--bs-font-sans-serif);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5;
+    text-shadow: none;
+    text-transform: none;
+    letter-spacing: normal;
+    word-break: normal;
+    white-space: normal;
+    word-spacing: normal;
+    line-break: auto;
+    font-size: 15px;
+    word-wrap: break-word;
+    opacity: 0;
+}
+.tooltip.show {
+    opacity: 1;
+}
+.tooltip .tooltip-arrow {
+    display: block;
+    width: var(--bs-tooltip-arrow-width);
+    height: var(--bs-tooltip-arrow-height);
+}
+.tooltip .tooltip-arrow::before {
+    position: absolute;
+    content: "";
+    border-color: transparent;
+    border-style: solid;
+}
+
+.tooltip-inner {
+    max-width: min(250px, auto);
+    padding: 0.25rem 0.5rem;
+    color: var(--text-p);
+    background-color: var(--bg-popup);
+    border-radius: 5px;
+}
+
+.fade {
+    transition: opacity 0.15s linear;
+}
+@media (prefers-reduced-motion: reduce) {
+    .fade {
+        transition: none;
+    }
+}
+.fade:not(.show) {
+    opacity: 0;
+}
+
+.bs-tooltip-bottom .tooltip-arrow,
+.bs-tooltip-auto[data-popper-placement^="bottom"] .tooltip-arrow {
+    top: calc(-1 * var(--bs-tooltip-arrow-height));
+}
+.bs-tooltip-bottom .tooltip-arrow::before,
+.bs-tooltip-auto[data-popper-placement^="bottom"] .tooltip-arrow::before {
+    bottom: -1px;
+    border-width: 0 calc(var(--bs-tooltip-arrow-width) * 0.5) var(--bs-tooltip-arrow-height);
+    border-bottom-color: var(--bg-popup);
+}
+
+.tooltip-inner > ul {
+    padding-left: 20px;
+}

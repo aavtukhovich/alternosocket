@@ -1,0 +1,52 @@
+.cookie-banner {
+    z-index: 1000;
+    position: fixed;
+    width: 80vw;
+    max-width: 800px;
+    background: var(--bg-cookies);
+    border: 1px var(--static-black) solid;
+    border-radius: 25px;
+    padding: 20px;
+    left: 50%;
+    bottom: 10vh;
+    display: none;
+    justify-content: space-between;
+    transform: translateX(-50%);
+    animation: cookie-enter 2s;
+    color: var(--text-main);
+}
+
+.cookie-banner.active {
+    display: flex;
+}
+
+.cookie-banner p {
+    margin-top: 10px;
+    line-height: 20px;
+}
+
+.cookie-banner .btn-contrast:hover::after {
+    background: var(--bg-btn-cookies);
+}
+
+@keyframes cookie-enter {
+    0% {
+        transform: translate(-50%, 500px);
+    }
+
+    100% {
+        transform: translate(-50%, 0);
+    }
+}
+
+@media (max-width: 600px) {
+    .cookie-banner {
+        flex-direction: column;
+    }
+
+    .cookie-banner .btn-contrast {
+        width: 50%;
+        margin: auto;
+        margin-top: 25px;
+    }
+}

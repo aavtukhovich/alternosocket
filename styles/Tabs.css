@@ -1,0 +1,97 @@
+.nav {
+    --disabled-color: var(--input-border);
+    display: flex;
+    padding: 0 20px 10px 0;
+    /* padding-left: 0;
+    padding-bottom: 10px; */
+    margin-bottom: 0;
+    list-style: none;
+    gap: 10px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    font-size: 16px;
+    font-weight: 900;
+    color: var(--text-p);
+    text-decoration: none;
+    background: none;
+    border: 0;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+    white-space: nowrap;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--static-pink);
+}
+.nav-link:focus-visible {
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+.nav-link.disabled {
+    color: var(--disabled-color);
+    pointer-events: none;
+    cursor: default;
+}
+
+.nav-tabs {
+    --bs-nav-tabs-border-width: 1px;
+    --bs-nav-tabs-border-radius: 5px;
+    --bs-nav-tabs-link-active-color: var(--text-main);
+    --bs-nav-tabs-link-active-bg: var(--bg-body);
+    border-bottom: var(--bs-nav-tabs-border-width) solid var(--input-border);
+}
+.nav-tabs .nav-link {
+    margin-bottom: calc(-1 * var(--bs-nav-tabs-border-width));
+    border: var(--bs-nav-tabs-border-width) solid transparent;
+    border-radius: var(--bs-nav-tabs-border-radius);
+}
+.nav-tabs .nav-link:hover,
+.nav-tabs .nav-link:focus {
+    isolation: isolate;
+    border-color: var(--static-pink);
+}
+.nav-tabs .nav-link.disabled,
+.nav-tabs .nav-link:disabled {
+    color: var(--disabled-color);
+    background-color: transparent;
+    border-color: transparent;
+}
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+    color: var(--bs-nav-tabs-link-active-color);
+    background-color: var(--bs-nav-tabs-link-active-bg);
+    border-color: var(--static-pink);
+}
+.nav-tabs .dropdown-menu {
+    margin-top: calc(-1 * var(--bs-nav-tabs-border-width));
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.tab-content > .tab-pane {
+    display: none;
+}
+.tab-content > .active {
+    padding: 50px 0;
+    display: block;
+}
+
+/* MODEL TABS */
+
+.input-group .nav {
+    width: min(100%, 300px);
+    justify-content: space-evenly;
+}
+
+.input-group .tab-content {
+    padding: 10px 0;
+}
+
+.input-group .tab-content > .active {
+    padding: 10px 0;
+}

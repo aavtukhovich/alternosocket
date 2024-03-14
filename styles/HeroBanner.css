@@ -1,0 +1,155 @@
+.hero-container {
+    position: relative;
+    width: 100%;
+    background: var(--bg-slider);
+}
+
+.hero-container .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url("../assets/backgrounds/bg-slider.png") center center no-repeat;
+}
+
+.hero-content {
+    max-width: 1200px;
+    padding: 130px 15px 150px 15px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    gap: 20px;
+}
+
+.hero-text {
+    flex: 2;
+}
+
+.hero-text > h1,
+.hero-text > h5,
+.btn-hero,
+.img-left > div:last-of-type {
+    transform: translateY(400px);
+    opacity: 0;
+    animation: slideIn 1s forwards;
+}
+
+.hero-text > h1 {
+    line-height: 1.07;
+    letter-spacing: -2px;
+    margin-bottom: 28px;
+
+    animation-delay: 200ms;
+}
+
+.hero-text > h5 {
+    font-size: 20px;
+    line-height: 1.6;
+    font-weight: 500;
+    padding-right: 10%;
+    margin-bottom: 40px;
+
+    animation-delay: 400ms;
+}
+
+.btn-hero {
+    margin-left: 10%;
+    animation-delay: 600ms;
+}
+
+@media (max-width: 730px) {
+    .btn-hero {
+        margin: auto;
+    }
+}
+
+.btn-hero:hover {
+    color: var(--text-main);
+}
+
+.btn-hero:hover::after {
+    background-color: white;
+    background: var(--btn-hero-bg-hover);
+}
+
+.btn-hero:hover svg {
+    fill: var(--text-main);
+}
+
+.hero-img-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+}
+
+.hero-img-container img {
+    margin-bottom: 20px;
+    border-radius: 20px;
+    max-width: 100%;
+    animation: bounce 4s infinite linear;
+    animation-delay: 1s;
+}
+
+.img-left {
+    flex: 3;
+}
+
+.img-right {
+    flex: 4;
+    transform: translateX(400px);
+    opacity: 0;
+    animation: slideIn 1s forwards;
+}
+
+.img1 {
+    position: relative;
+    left: -20px;
+    transform: translateY(-400px);
+    opacity: 0;
+    animation: slideIn 1s forwards;
+}
+
+.img-left > div,
+.img-right {
+    animation-delay: 200ms !important;
+}
+
+@media (max-width: 991px) {
+    .hero-text > h1 {
+        font-size: 60px;
+    }
+    .hero-text > h5 {
+        font-size: 16px;
+    }
+    .hero-content {
+        padding: 60px 15px 78px 15px;
+    }
+}
+
+@media (max-width: 730px) {
+    .hero-text {
+        font-size: 60px;
+    }
+    .hero-img-container {
+        display: none;
+    }
+}
+
+@keyframes slideIn {
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    50% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}

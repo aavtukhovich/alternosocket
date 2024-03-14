@@ -1,0 +1,152 @@
+.card-container {
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+}
+
+@media (max-width: 730px) {
+    .card-container {
+        height: auto;
+    }
+}
+
+.card-container {
+    cursor: pointer;
+    border-radius: 20px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--input-border);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease-in-out, max-height 0.3s ease-in-out;
+}
+
+.card-container:hover {
+    /* background-color: antiquewhite; */
+    box-shadow: var(--static-blue) 0px 0px 40px -10px;
+    color: var(--text-main);
+}
+
+.image-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    max-height: 70%;
+    margin-bottom: 15px;
+}
+
+@media (min-width: 1500px) {
+    .popular-container .card-container > h5,
+    .popular-container .info-container {
+        padding-left: 10%;
+    }
+    /* .popular-container .image-container {
+        margin: auto;
+    } */
+}
+
+.card-container > .image-container > img {
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-container > span {
+    position: absolute;
+
+    background-image: var(--gradient);
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-weight: 600;
+    color: var(--static-white);
+    font-size: 15px;
+}
+
+.image-container > .price {
+    right: 15px;
+    bottom: -10px;
+}
+
+.image-container > .supply {
+    right: 15px;
+    top: -10px;
+}
+
+.image-container > .time {
+    left: 15px;
+    bottom: -10px;
+}
+
+.card-container > a,
+.card-container > h5 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.info-container {
+    display: flex;
+}
+
+.info-container > svg,
+.info-container > img {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin: 0 15px;
+    object-fit: cover;
+}
+
+.listing-section {
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    max-height: 0;
+    text-align: center;
+}
+
+.card-container.dexart {
+    text-align: center;
+    min-height: 311px;
+    cursor: default;
+}
+
+.card-container.active .listing-section {
+    margin-top: 10px;
+    border-top: 1px white solid;
+    max-height: 200px;
+    padding: 10px 0;
+}
+
+.card-container.dexart label {
+    font-weight: 700;
+    display: block;
+    font-size: 20px;
+}
+
+.card-container.dexart input {
+    width: min(100%, 351px);
+    margin: 10px 0;
+}
+
+.card-link.partner .buttons,
+.card-link.creator .buttons {
+    width: 100%;
+    padding-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.nft-disabled {
+    opacity: 0.6;
+}
+
+.nft-disabled:hover {
+    box-shadow: none;
+}

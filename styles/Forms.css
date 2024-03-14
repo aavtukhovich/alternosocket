@@ -1,0 +1,341 @@
+.input-group label {
+    font-weight: 700;
+    display: block;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.input-group input {
+    width: min(100%, 351px);
+    margin-right: 10px;
+}
+
+.error-message {
+    color: var(--static-danger);
+}
+
+.input-danger {
+    border-color: var(--static-danger);
+    outline-color: var(--static-danger);
+}
+
+/* ONE OFFS */
+
+.input-group.avatar > img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+/* EDIT COLLECTION */
+.edit-col-section {
+    width: 100%;
+}
+
+.edit-col-section > .edit-message {
+    min-height: 50vh;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    padding: 0 50px;
+    > a {
+        margin-top: 20px;
+    }
+}
+
+.edit-col-section > .edit-content {
+    position: relative;
+    text-align: center;
+    padding: 50px 100px;
+    > p {
+        margin: 10px;
+    }
+}
+
+.edit-col-section form {
+    width: 100%;
+    max-width: 1200px;
+    text-align: left;
+    margin: auto;
+}
+
+.edit-col-section form > a {
+    margin-left: 10px;
+}
+
+.edit-col-section form > .input-group {
+    margin: 20px;
+}
+
+@media (max-width: 750px) {
+    .edit-col-section > .edit-content {
+        padding: 25px 15px;
+    }
+    .edit-col-section form {
+        margin: 25px 0;
+    }
+}
+
+.input-group.coll-avatar > img {
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.input-group.thumbnail {
+    > img {
+        border-radius: 10px;
+        width: min(100%, 500px);
+        height: 280px;
+        object-fit: cover;
+    }
+    > input {
+        display: block;
+        margin-top: 20px;
+    }
+}
+
+.input-group.model {
+    > .model-container {
+        border-radius: 10px;
+        width: min(100%, 500px);
+        height: 280px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 20px 0;
+    }
+    > input {
+        display: block;
+        margin-top: 20px;
+    }
+}
+
+.input-group.tags {
+    > ul {
+        display: flex;
+        list-style: none;
+        margin: 20px 0;
+        flex-wrap: wrap;
+    }
+
+    > ul > li {
+        padding: 5px 10px;
+        background-color: var(--bg-card);
+        margin: 0 5px;
+        border-radius: 5px;
+        display: flex;
+        font-size: 20px;
+        :hover {
+            fill: #c92d18;
+        }
+        > span {
+            fill: var(--static-danger);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            margin-left: 10px;
+            > svg {
+                height: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width: 750px) {
+    .input-group > .btn-sm {
+        display: block;
+        margin: 20px auto;
+    }
+}
+
+.optionals {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.optionals > .input-group {
+    width: min(100%, 400px);
+    background-color: var(--bg-card);
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid var(--input-border);
+}
+
+.react-datepicker-wrapper {
+    width: min(100%, 500px);
+}
+
+.react-datepicker-wrapper,
+.optionals > .input-group > input {
+    margin: 20px 0;
+}
+
+/* HELPERS */
+.button-wrapper {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.button-wrapper button {
+    position: relative;
+    z-index: 1;
+}
+
+.button-wrapper input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer !important;
+    z-index: 2;
+}
+
+.hidden-input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* DATE PICKER FIX */
+.react-datepicker {
+    background-color: var(--bg-popup) !important;
+    color: var(--text-main) !important;
+}
+
+.react-datepicker__header {
+    background-color: var(--bg-popup2) !important;
+}
+
+.react-datepicker__current-month,
+.react-datepicker-time__header,
+.react-datepicker-year-header {
+    color: var(--text-main) !important;
+}
+
+.react-datepicker__day-name,
+.react-datepicker__day,
+.react-datepicker__time-name {
+    color: var(--text-main) !important;
+}
+
+.react-datepicker__day--disabled {
+    color: var(--text-p) !important;
+}
+
+.react-datepicker__day:hover {
+    background-color: var(--bg-popup-hover) !important;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__day--in-selecting-range,
+.react-datepicker__day--in-range {
+    background-color: var(--static-blue) !important;
+}
+
+.react-datepicker__time-container .react-datepicker__time {
+    background-color: var(--bg-popup) !important;
+}
+
+.react-datepicker__time-container
+    .react-datepicker__time
+    .react-datepicker__time-box
+    ul.react-datepicker__time-list
+    li.react-datepicker__time-list-item:hover {
+    background-color: var(--bg-popup-hover) !important;
+}
+
+.react-datepicker__time-container
+    .react-datepicker__time
+    .react-datepicker__time-box
+    ul.react-datepicker__time-list
+    li.react-datepicker__time-list-item--selected {
+    background-color: var(--static-blue) !important;
+}
+
+.react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle::after {
+    border-bottom-color: var(--bg-popup2) !important;
+}
+
+.pagination {
+    margin: 15px 0;
+}
+
+.pagination > button {
+    margin-right: 5px;
+}
+
+/* MAGISCAN */
+
+.qr {
+    width: min(100%, 300px);
+    padding: 20px;
+    > svg {
+        border-radius: 5px;
+    }
+}
+
+.connection-container {
+    padding: 0 10px;
+}
+
+.connection-container > a {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 22px;
+    padding: 15px 39px;
+    cursor: pointer;
+    transition: all ease 0.3s;
+    display: block;
+    margin: 20px;
+    width: min(220px, 100%);
+}
+
+.connection-container > button {
+    display: block;
+    margin: 20px;
+}
+
+.magiscan-model-container {
+    padding: 0 10px;
+}
+
+.magiscan-model-display {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    gap: 20px;
+}
+
+.magiscan-model {
+    background-color: var(--bg-card);
+    border-radius: 10px;
+    border: 1px solid var(--input-border);
+    text-align: center;
+    padding: 10px;
+}
+
+.magiscan-model > img {
+    border-radius: 5px;
+}
+
+.magiscan-model > h5 {
+    margin: 5px 0;
+}

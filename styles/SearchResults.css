@@ -1,0 +1,59 @@
+.searchres-section {
+    width: 100%;
+    background-color: var(--bg-popular);
+}
+
+.searchres-container {
+    margin: auto;
+    width: 100%;
+    max-width: 1200px;
+    padding: 50px 25px;
+}
+
+.searchres-container > h3,
+.searchres-container > p {
+    text-align: center;
+    margin: 5px 0;
+}
+
+.searchres-content {
+    padding: 50px 0;
+}
+
+.nothing-found {
+    text-align: center;
+}
+
+.nothing-found > a {
+    display: block;
+    margin-top: 25px;
+}
+
+.search-display {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.searchres-content > button {
+    margin: 50px auto 0 auto;
+    display: block;
+}
+
+@media (max-width: 1200px) {
+    .search-display {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 925px) {
+    .search-display {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 630px) {
+    .search-display {
+        grid-template-columns: 1fr;
+    }
+}

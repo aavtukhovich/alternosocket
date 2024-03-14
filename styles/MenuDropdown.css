@@ -1,0 +1,40 @@
+.nav-drop > button {
+    background: transparent;
+    padding: 0;
+    color: var(--main-text);
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 700;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.nav-drop > button:hover {
+    color: var(--static-pink);
+}
+
+@media (max-width: 750px) {
+    .nav-drop {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 20px 0;
+        border-top: 1px solid var(--input-border);
+    }
+
+    .nav-drop .dropdown-menu.show {
+        position: relative !important;
+        transform: none !important;
+        width: 100%;
+        text-align: center;
+        border: none;
+    }
+
+    .nav-drop.show {
+        padding-bottom: 0;
+    }
+
+    .nav-drop .dropdown-item {
+        border-top: 1px solid var(--input-border);
+    }
+}

@@ -1,0 +1,36 @@
+.error-section {
+    background-color: var(--bg-popular);
+}
+
+.error-model-section {
+    background-color: var(--bg-body);
+}
+
+.error-container {
+    padding: 100px 25px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.error-container img {
+    max-width: 250px;
+}
+
+.error-container p {
+    margin-top: 5px;
+    margin-bottom: 35px;
+}
+
+@media (max-width: 730px) {
+    .error-container {
+        text-align: center;
+        flex-direction: column;
+    }
+}
+
+.btn-grad:hover > a {
+    color: var(--static-white);
+}
